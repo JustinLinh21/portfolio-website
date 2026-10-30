@@ -1,99 +1,325 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-CH">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Linh | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="style.css">
+  <title>Justin Linh – Portfolio | Informatik Praktikum & Lehrstelle</title>
+  <meta name="description" content="Portfolio von Justin Linh: Schüler aus der Schweiz mit Interesse an Softwareentwicklung. Ich suche ein Praktikum und eine Lehrstelle als Informatiker.">
+  <meta name="theme-color" content="#0e1116">
+
+  <!-- Vorschau beim Teilen des Links (z. B. WhatsApp, LinkedIn) -->
+  <meta property="og:title" content="Justin Linh – Portfolio">
+  <meta property="og:description" content="Praktikum und Lehrstelle als Informatiker gesucht. C#, SQL, HTML, CSS, JavaScript, PowerShell, GitHub.">
+  <meta property="og:type" content="website">
+
+  <!-- Einfaches Favicon als Inline-SVG, damit keine zusätzliche Datei nötig ist -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1116'/%3E%3Ctext x='32' y='43' font-size='30' font-family='monospace' font-weight='700' text-anchor='middle' fill='%233ecfae'%3EJL%3C/text%3E%3C/svg%3E">
+
+  <!-- Markiert früh, dass JavaScript läuft (für die dezenten Einblend-Effekte) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <h2>Justin Linh</h2>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-            <ul>
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projekte</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Zur Startseite">
+        <span class="logo-mark">JL</span>
+        <span class="logo-text">Justin Linh</span>
+      </a>
 
-    <main>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
 
-        <section id="hero">
-            <h1>Hallo, ich bin Justin 👋</h1>
+      <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#ueber-mich">Über mich</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projekte">Projekte</a></li>
+          <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <p>
-                Schüler aus der Schweiz mit Interesse an
-                Softwareentwicklung, Webentwicklung und Datenbanken.
-            </p>
+  <main id="main">
 
-            <button>Meine Projekte</button>
-        </section>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Portfolio · Schweiz</p>
+          <h1>Hallo, ich bin Justin.<br><span class="accent">Ich programmiere gerne</span> und suche meinen Einstieg in die Informatik.</h1>
+          <p class="lead">
+            Ich suche ein Praktikum und danach eine Lehrstelle als Informatiker EFZ
+            (Applikationsentwicklung). Auf dieser Seite zeige ich, was ich bisher gelernt
+            und gebaut habe.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projekte">Projekte ansehen</a>
+            <a class="btn btn-ghost" href="#kontakt">Kontakt aufnehmen</a>
+          </div>
+        </div>
 
-        <section id="about">
-            <h2>Über mich</h2>
-
-            <p>
-                Ich interessiere mich für C#, SQL, HTML, CSS,
-                JavaScript und GitHub. Aktuell baue ich Projekte auf,
-                um meine Fähigkeiten zu verbessern und ein Praktikum
-                im Bereich Informatik zu finden.
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-
-            <ul>
-                <li>C#</li>
-                <li>SQL</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Git & GitHub</li>
-                <li>PowerShell</li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projekte</h2>
-
+        <!-- "Auf einen Blick"-Karte: schnelle Infos für Personalverantwortliche -->
+        <aside class="glance" aria-label="Auf einen Blick">
+          <h2 class="glance-title">Auf einen Blick</h2>
+          <dl class="glance-list">
             <div>
-                <h3>CoinFlipGuess</h3>
-                <p>Münzwurfspiel in C#.</p>
+              <dt>Ziel</dt>
+              <dd>Praktikum, danach Lehrstelle als Informatiker</dd>
             </div>
-
             <div>
-                <h3>Portfolio Website</h3>
-                <p>Meine persönliche Bewerbungswebsite.</p>
+              <dt>Fokus</dt>
+              <dd>Softwareentwicklung</dd>
             </div>
-        </section>
+            <div>
+              <dt>Technologien</dt>
+              <dd>C#, SQL, HTML, CSS, JavaScript, PowerShell, GitHub</dd>
+            </div>
+            <div>
+              <dt>Standort</dt>
+              <dd>Schweiz</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
 
-        <section id="contact">
-            <h2>Kontakt</h2>
+    <!-- ============ ÜBER MICH ============ -->
+    <section class="section" id="ueber-mich">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">01 · Über mich</p>
+          <h2>Wer ich bin</h2>
+        </header>
 
-            <p>E-Mail: deine.email@example.com</p>
-
+        <div class="about-grid reveal">
+          <div class="about-text">
             <p>
-                GitHub:
-                <a href="https://github.com/JustinLinh21">
-                    JustinLinh21
-                </a>
+              Ich bin Justin Linh und wohne in der Schweiz. Mich fasziniert, wie aus ein paar
+              Zeilen Code ein Programm wird, das wirklich etwas tut. Angefangen hat es im
+              Unterricht mit C#. Seither probiere ich gerne selbst Dinge aus, lese mich in neue
+              Themen ein und versuche, meinen Code von Mal zu Mal sauberer zu schreiben.
             </p>
-        </section>
+            <p>
+              Neben der Programmierung arbeite ich mit SQL-Datenbanken, baue kleine Webseiten mit
+              HTML, CSS und JavaScript und automatisiere Abläufe mit PowerShell. Meinen Code
+              verwalte ich mit Git und GitHub.
+            </p>
+            <p>
+              Mein Ziel ist eine Lehre als Informatiker. Vorher möchte ich in einem Praktikum
+              herausfinden, wie der Alltag in einem Entwicklungsteam aussieht, und dort so viel
+              wie möglich lernen.
+            </p>
+          </div>
 
-    </main>
+          <ul class="values" aria-label="Meine Arbeitsweise">
+            <li>
+              <h3>Sauber arbeiten</h3>
+              <p>Verständliche Namen, kurze Methoden und Kommentare dort, wo sie helfen.</p>
+            </li>
+            <li>
+              <h3>Strukturiert vorgehen</h3>
+              <p>Ich dokumentiere Projekte nach IPERKA: informieren, planen, entscheiden, realisieren, kontrollieren, auswerten.</p>
+            </li>
+            <li>
+              <h3>Dranbleiben</h3>
+              <p>Wenn etwas nicht funktioniert, suche ich so lange, bis ich verstehe, warum.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>© 2026 Justin Linh</p>
-    </footer>
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">02 · Skills</p>
+          <h2>Was ich bisher gelernt habe</h2>
+          <p class="section-intro">
+            Keine Prozentbalken, sondern ehrlich: Das setze ich ein und dafür habe ich es schon benutzt.
+          </p>
+        </header>
 
-    <script src="script.js"></script>
+        <div class="skills-grid">
+          <article class="card reveal">
+            <h3>Programmierung</h3>
+            <ul class="tags">
+              <li>C#</li>
+              <li>JavaScript</li>
+            </ul>
+            <p>
+              C#: Klassen, Methoden, Schleifen, Verzweigungen und Objektorientierung in
+              Schulprojekten. JavaScript: Interaktionen auf Webseiten, zum Beispiel das
+              Menü dieser Seite.
+            </p>
+          </article>
 
+          <article class="card reveal">
+            <h3>Webentwicklung</h3>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <p>
+              Semantisches HTML, Flexbox und Grid, responsive Layouts und Barrierefreiheit
+              (Kontraste, Fokus-Zustände, Skip-Link).
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Datenbanken</h3>
+            <ul class="tags">
+              <li>SQL</li>
+            </ul>
+            <p>
+              Tabellen abfragen mit SELECT, filtern, sortieren und verknüpfen. Ich lerne
+              gerade, Datenbanken sinnvoll zu strukturieren.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Werkzeuge</h3>
+            <ul class="tags">
+              <li>PowerShell</li>
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
+            <p>
+              Kleine Abläufe mit PowerShell automatisieren. Mit Git und GitHub Versionen
+              speichern, Änderungen nachvollziehen und Projekte veröffentlichen.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJEKTE ============ -->
+    <section class="section" id="projekte">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">03 · Projekte</p>
+          <h2>Woran ich gearbeitet habe</h2>
+        </header>
+
+        <div class="projects-grid">
+
+          <!-- TODO: Beschreibung und Links an das echte Projekt anpassen -->
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>GameLauncher</h3>
+              <span class="project-type">Schulprojekt · C#</span>
+            </div>
+            <p>
+              Ein Launcher in C#, der Spiele über ein Menü startet. Als Erweiterung habe ich
+              das Spiel «CoinFlipGuess» umgesetzt, bei dem man eine Münzwurf-Seite
+              rät. Dazu gehört eine vollständige Dokumentation nach IPERKA.
+            </p>
+            <ul class="tags tags-small">
+              <li>C#</li>
+              <li>OOP</li>
+              <li>Dokumentation</li>
+            </ul>
+            <div class="project-links">
+              <!-- TODO: echten Repository-Link eintragen -->
+              <a href="https://github.com/DEIN-USERNAME/gamelauncher" target="_blank" rel="noopener">Code auf GitHub</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Diese Portfolio-Webseite</h3>
+              <span class="project-type">Eigenes Projekt · Web</span>
+            </div>
+            <p>
+              Komplett von Hand geschrieben, ohne Framework und ohne Vorlage. Mit responsive
+              Layout, Dark-Mode-Design, eigener Farbpalette und Hosting über GitHub Pages.
+              Ich habe darauf geachtet, dass sie auch mit der Tastatur bedienbar ist.
+            </p>
+            <ul class="tags tags-small">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>GitHub Pages</li>
+            </ul>
+            <div class="project-links">
+              <!-- TODO: echten Repository-Link eintragen -->
+              <a href="https://github.com/DEIN-USERNAME/portfolio" target="_blank" rel="noopener">Code auf GitHub</a>
+            </div>
+          </article>
+
+          <article class="project project-placeholder reveal">
+            <h3>Weitere Projekte folgen</h3>
+            <p>
+              Ich arbeite laufend an neuen Ideen, zum Beispiel kleinen SQL-Datenbanken und
+              PowerShell-Skripten. Alles Neue lade ich auf GitHub hoch.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/DEIN-USERNAME" target="_blank" rel="noopener">Mein GitHub-Profil</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="section section-alt" id="kontakt">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">04 · Kontakt</p>
+          <h2>Lass uns sprechen</h2>
+        </header>
+
+        <div class="contact reveal">
+          <p class="contact-text">
+            Haben Sie einen Praktikumsplatz oder eine Lehrstelle als Informatiker frei oder
+            möchten Sie mich einfach kennenlernen? Ich freue mich über eine Nachricht und
+            antworte so schnell wie möglich.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">E-Mail</span>
+              <!-- TODO: echte E-Mail-Adresse eintragen -->
+              <a href="mailto:justin.linh@example.com">justin.linh@example.com</a>
+            </li>
+            <li>
+              <span class="contact-label">GitHub</span>
+              <!-- TODO: echten Benutzernamen eintragen -->
+              <a href="https://github.com/DEIN-USERNAME" target="_blank" rel="noopener">github.com/DEIN-USERNAME</a>
+            </li>
+            <li>
+              <span class="contact-label">Standort</span>
+              <span>Schweiz</span>
+            </li>
+          </ul>
+
+          <a class="btn btn-primary" href="mailto:justin.linh@example.com?subject=Anfrage%20Praktikum%20%2F%20Lehrstelle">E-Mail schreiben</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Justin Linh</p>
+      <p><a href="#top">Nach oben ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
 </body>
 </html>
